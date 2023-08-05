@@ -1,0 +1,23 @@
+<ion-content>
+
+  <app-header title="Perfil"></app-header>
+
+  <div class="content ion-text-center" id="profile">
+    <br>
+    <div class="avatar-container">
+      <img *ngIf="user.profileImage" [src]="user.profileImage" alt="Imagen de perfil" class="avatar" />
+      <ion-icon *ngIf="!user.profileImage" name="person-circle-outline" class="avatar"></ion-icon>
+    </div>
+    <h2>{{ user.name }}</h2>
+    <div>{{ user.email }}</div>
+    <ion-button (click)="signOut()" shape="round">
+      Cerrar sesión
+      <ion-icon slot="end" name="log-out-outline"></ion-icon>
+    </ion-button>
+    <!-- HTML template -->
+
+
+  </div>
+
+
+</ion-content>

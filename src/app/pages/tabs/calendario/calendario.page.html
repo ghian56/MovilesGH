@@ -1,0 +1,31 @@
+<ion-content>
+  <app-header title="Calendario"></app-header>
+  <div class="content ion-text-center" id="profile">
+    <br>
+    <ion-col>
+
+      <ion-row>
+        <ion-col class="ion-padding">
+          <ion-header>
+            <ion-toolbar>
+              <div>
+                <h2>{{ getFormattedDate(calendar.currentDate) }}</h2> <!-- Muestra la fecha arriba del calendario -->
+                <calendar [eventSource]="feriados" [allDayLabel]="'Dia de:'" [currentDate]="calendar.currentDate"
+                  (onCurrentDateChanged)="onCurrentDateChanged($event)" (onEventSelected)="onEventSelected($event)"
+                  (onTimeSelected)="onTimeSelected($event)" [step]="30" formatMonthViewDay="D"
+                  formatMonthViewDayHeader="MMMM YYYY" (formatTitle)="formatTitle" [locale]="'es'"
+                  [startingDayMonth]="1" [startingDayWeek]="1" noEventsLabel="No hay eventos">
+                  
+                </calendar>
+
+
+
+              </div>
+            </ion-toolbar>
+          </ion-header>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </div>
+
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-content>
+
+    <app-header title="Informacion"></app-header>
+
+    <div class="content ion-text-center" id="profile">
+        <br>
+ 
+
+            <ion-col *ngFor="let alimento of alimentos" >
+                
+                    <ion-row>
+                        <ion-col class="ion-padding" >
+                            <h3 class="ion-margin title">{{alimento.title}}</h3>
+                            <p class="ion-margin">{{alimento.descripcion }}</p>
+                        </ion-col>
+                    </ion-row>
+
+               
+            </ion-col>
+
+
+
+    </div>
+
+</ion-content>
